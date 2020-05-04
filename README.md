@@ -1,9 +1,9 @@
 # Local Binary Patterns Histograms (LBPH)
 
-[![Build Status](https://travis-ci.org/kelvins/lbph.svg?branch=master)](https://travis-ci.org/kelvins/lbph)
-[![Coverage Status](https://coveralls.io/repos/github/kelvins/lbph/badge.svg?branch=master)](https://coveralls.io/github/kelvins/lbph?branch=master)
-[![GoDoc](https://godoc.org/github.com/kelvins/lbph?status.svg)](https://godoc.org/github.com/kelvins/lbph)
-[![Go Report Card](https://goreportcard.com/badge/github.com/kelvins/lbph)](https://goreportcard.com/report/github.com/kelvins/lbph)
+[![Build Status](https://travis-ci.org/lcoutinho/lbph.svg?branch=master)](https://travis-ci.org/lcoutinho/lbph)
+[![Coverage Status](https://coveralls.io/repos/github/lcoutinho/lbph/badge.svg?branch=master)](https://coveralls.io/github/lcoutinho/lbph?branch=master)
+[![GoDoc](https://godoc.org/github.com/lcoutinho/lbph?status.svg)](https://godoc.org/github.com/lcoutinho/lbph)
+[![Go Report Card](https://goreportcard.com/badge/github.com/lcoutinho/lbph)](https://goreportcard.com/report/github.com/lcoutinho/lbph)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
 
 # Summary
@@ -73,7 +73,7 @@ The comparison metric can be chosen as explained in the [metrics](#metrics) sect
 
 ## Important Notes
 
-The current LBPH implementation uses a fixed `radius` of `1` and a fixed number of `neighbors` equal to `8`. We still need to implement the usage of these parameters in the LBP package (feel free to contribute here). Related to the [issue 1](https://github.com/kelvins/lbph/issues/1).
+The current LBPH implementation uses a fixed `radius` of `1` and a fixed number of `neighbors` equal to `8`. We still need to implement the usage of these parameters in the LBP package (feel free to contribute here). Related to the [issue 1](https://github.com/lcoutinho/lbph/issues/1).
 
 # I/O
 
@@ -81,7 +81,7 @@ In this section, you will find a brief explanation about the input and output da
 
 ## Input
 
-All input images (for training and testing) must have the same size. Different of OpenCV, the images don't need to be in grayscale, because each pixel is automatically converted to grayscale in the [GetPixels](https://github.com/kelvins/lbph/blob/master/lbp/lbp.go#L55) function using the following [formula](https://en.wikipedia.org/wiki/Grayscale#Luma_coding_in_video_systems):
+All input images (for training and testing) must have the same size. Different of OpenCV, the images don't need to be in grayscale, because each pixel is automatically converted to grayscale in the [GetPixels](https://github.com/lcoutinho/lbph/blob/master/lbp/lbp.go#L55) function using the following [formula](https://en.wikipedia.org/wiki/Grayscale#Luma_coding_in_video_systems):
 
 ```
 Y = (0.299 * RED) + (0.587 * GREEN) + (0.114 * BLUE)
@@ -106,7 +106,7 @@ In this section, we explain how the algorithm should be used.
 Use the following `go get` command:
 
 ```
-$ go get -t github.com/kelvins/lbph
+$ go get -t github.com/lcoutinho/lbph
 ```
 
 It will get the package and its dependencies, including the test dependencies.
@@ -124,8 +124,8 @@ import (
 	"image"
 	"os"
 
-	"github.com/kelvins/lbph"
-	"github.com/kelvins/lbph/metric"
+	"github.com/lcoutinho/lbph"
+	"github.com/lcoutinho/lbph/metric"
 )
 
 func main() {
@@ -261,7 +261,7 @@ The metric should be defined before calling the `Predict` function.
 
 # How to contribute
 
-Feel free to contribute by commenting, suggesting, creating [issues](https://github.com/kelvins/lbph/issues) or sending pull requests. Any help is welcome.
+Feel free to contribute by commenting, suggesting, creating [issues](https://github.com/lcoutinho/lbph/issues) or sending pull requests. Any help is welcome.
 
 ## Contributing
 
